@@ -8,23 +8,32 @@ import Discover from './Discover'
 
 const styles = StyleSheet.create({
 
+    labelContainer: {
+      backgroundColor: 'transparent'
+    },
+
     loginButtonArea: {
-        paddingTop: 250
+        paddingTop: 100
     },
     container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
     },
     errorMessage: {
         fontSize: 20,
         color: 'red',
         alignSelf: 'center'
     },
+    textLabel: {
+        fontSize: 15,
+        color: "white",
+        fontWeight: "bold"
+    },
     text: {
-        fontSize: 20,
-        backgroundColor: '#F5FCFF'
+      fontSize: 15,
+      color: "white",
+      marginLeft: 75
     }
 });
 
@@ -76,27 +85,30 @@ onAuthFailed() {
     return (
       <View >
       <Image source={require('../images/background.png')} style={styles.container} blurRadius={ 2 }>
+          <FormLabel containerStyle={styles.labelContainer} labelStyle={styles.textLabel}>
+            Enter Email
+          </FormLabel>
+          <FormInput
+            text={this.state.email}
+            onChangeText={email => this.setState({ email })}
+            inputStyle={styles.text}
+            />
+          <FormLabel containerStyle={styles.labelContainer} labelStyle={styles.textLabel}>
+            Enter Password
+          </FormLabel>
+          <FormInput
+              text={this.state.password}
+              onChangeText={password => this.setState({ password })}
+              password={true}
+              inputStyle={styles.text}
+            />
+          <Text style={errorMessage}>{this.state.error}</Text>
 
-        <FormLabel>Enter Email</FormLabel>
-        <FormInput
-          text={this.state.email}
-          onChangeText={email => this.setState({ email })}
-          InputStyle={fieldStyles}
-          />
-        <FormLabel>Enter Passoword</FormLabel>
-        <FormInput
-            text={this.state.password}
-            onChangeText={password => this.setState({ password })}
-            InputStyle={fieldStyles}
-            password={true}
-          />
-
-        <Text style={errorMessage}>{this.state.error}</Text>
-        <View style={loginButtonArea}>
+          <View style={loginButtonArea}>
           <Button
             raised
             backgroundColor='#5fa8d3'
-            fontSize={18}
+            fontSize={15}
             borderRadius={50}
             title='Login or Sign Up'
             underlayColor='transparent'

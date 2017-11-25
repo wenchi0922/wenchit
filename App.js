@@ -13,7 +13,6 @@ export default class App extends Component {
         firebase.initializeApp({
           
 
-
         });
 
         firebase.auth().onAuthStateChanged((user) => {
