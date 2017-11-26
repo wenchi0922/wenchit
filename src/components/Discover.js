@@ -75,7 +75,7 @@ class Discover extends Component {
         return (
           <ListItem itemDivider key={item.name}>
             <Left />
-            <Body style={{  marginRight: 300, paddingTop: 20 }}>
+            <Body style={{  marginRight: 300, marginTop: 0 }}>
               <Text style={{ fontWeight: "bold", alignSelf: 'center', marginLeft: 300, color:'slategray'  }}>
                 {item.name}
               </Text>
@@ -97,15 +97,18 @@ class Discover extends Component {
     };
     render() {
     return (
-
       <View>
+        <SearchBar
+          containerStyle = {{ paddingTop: 25 }}
+          lightTheme
+          placeholder='Search Tags...'
+         />
         <FlatList
           data={this.state.data}
           renderItem={this.renderItem}
           keyExtractor={item => item.name}
           stickyHeaderIndices={this.state.stickyHeaderIndices}
         />
-
       </View>
     );
 }

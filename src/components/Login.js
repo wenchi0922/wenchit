@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View,  Image } from 'react-native';
-import { Button, FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
-import { MKTextField, MKColor, MKButton } from 'react-native-material-kit';
+import { Button, FormLabel, FormInput } from 'react-native-elements'
 import Loader from './Loader';
 import firebase from 'firebase';
 import Discover from './Discover'
