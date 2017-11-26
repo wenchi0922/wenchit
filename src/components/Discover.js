@@ -5,8 +5,8 @@ import { SearchBar } from 'react-native-elements'
 
 const styles = StyleSheet.create({
   img: {
-    width: 200,
-    height: 200,
+    width: 350,
+    height: 350,
     alignSelf: 'center'
   }
 })
@@ -18,39 +18,41 @@ class Discover extends Component {
       this.state = {
         data: [
           { name: "Looking for Brunch?", header: true },
-          { id: "1", name: "Brunch", image: require("../images/item/brunch.jpg"), username: "popyummy_mag", header: false },
+          { name: "#BenedictEgg", image: require("../images/item/brunch.jpg"), username: "popyummy_mag", header: false },
+          { name: "#Scone", image: require("../images/item/scone.jpg"), username: "lesleslin", header: false },
+          { name: "#Croissant", image: require("../images/item/croissant.jpg"), username: "lesleslin", header: false },
 
           { name: "Looking for Proper Meal?", header: true },
-          { id: "3", name: "Taiwanese Food", image: require("../images/item/taiwanese.jpg"), username: "popyummy_mag", header: false },
-          { id: "4", name: "Risotto", image: require("../images/item/risotto.jpg"), username: "popyummy_mag", header: false },
-          { id: "5", name: "Crab Porridge", image: require("../images/item/crab.jpg"), username: "popyummy_mag", header: false },
-          { id: "6", name: "Dim Sum", image: require("../images/item/dimsum.jpg"), username: "4foodie", header: false },
-          { id: "7", name: "Korean Barbecue", image: require("../images/item/koreanbarbecue.jpg"), username: "4foodie", header: false },
-          { id: "8", name: "Seafood Platter",  image: require("../images/item/seafood.jpg"), username: "4foodie", header: false },
-          { id: "9", name: "Curry Rice", image: require("../images/item/curry.jpg"), username: "popyummy_mag", header: false },
-          { id: "10", name: "Yakitori Set", image: require("../images/item/yakitori.jpg"), username: "popyummy_mag", header: false },
+          { name: "#TaiwaneseFood", image: require("../images/item/taiwanese.jpg"), username: "popyummy_mag", header: false },
+          { name: "#Risotto", image: require("../images/item/risotto.jpg"), username: "popyummy_mag", header: false },
+          { name: "#Crab #Porridge", image: require("../images/item/crab.jpg"), username: "popyummy_mag", header: false },
+          { name: "#DimSum", image: require("../images/item/dimsum.jpg"), username: "4foodie", header: false },
+          { name: "#Korean #Barbecue", image: require("../images/item/koreanbarbecue.jpg"), username: "4foodie", header: false },
+          { name: "#SeafoodPlatter",  image: require("../images/item/seafood.jpg"), username: "4foodie", header: false },
+          { name: "#CurryRice", image: require("../images/item/curry.jpg"), username: "popyummy_mag", header: false },
+          { name: "#Yakitori Set", image: require("../images/item/yakitori.jpg"), username: "popyummy_mag", header: false },
 
           { name: "Looking for Cafe?", header: true },
-          { id: "11", name: "Cala Cafe", image: require("../images/item/cala.jpg"), username: "popyummy_mag", header: false },
-          { id: "12", name: "Brown Sugar Latte", image: require("../images/item/cof.jpg"), username: "popyummy_mag", header: false },
-          { id: "13", name: "Moomin Cafe", image: require("../images/item/moomin.jpg"), username: "popyummy_mag", header: false },
-          { id: "14", name: "Latte", image: require("../images/item/latte.jpg"), username: "popyummy_mag", header: false },
+          { name: "#Cala #Cafe", image: require("../images/item/cala.jpg"), username: "popyummy_mag", header: false },
+          { name: "#BrownSugarLatte", image: require("../images/item/cof.jpg"), username: "popyummy_mag", header: false },
+          { name: "#Moomin #Cafe", image: require("../images/item/moomin.jpg"), username: "popyummy_mag", header: false },
+          { name: "#Latte", image: require("../images/item/latte.jpg"), username: "popyummy_mag", header: false },
 
           { name: "Looking for Snacks?", header: true },
-          { id: "16", name: "Roatsed Beef Sandwich", image: require("../images/item/roastedbeef.jpg"), username: "4foodie", header: false },
-          { id: "17", name: "Churro", image: require("../images/item/churro.jpg"), username: "popyummy_mag", header: false },
-          { id: "18", name: "Bubble Tea", image: require("../images/item/bubbletea.jpg"), username: "popyummy_mag", header: false },
-          { id: "19", name: "Fruit Shake", image: require("../images/item/fruitshake.jpg"), username: "popyummy_mag", header: false },
-          { id: "20", name: "Colorful Shake", image: require("../images/item/shake.jpg"), username: "popyummy_mag", header: false },
-          { id: "21", name: "Taiwanese Pastry", image: require("../images/item/pastry.jpg"), username: "popyummy_mag", header: false },
+          { name: "#Roatsed Beef #Sandwich", image: require("../images/item/roastedbeef.jpg"), username: "4foodie", header: false },
+          { name: "#Churro", image: require("../images/item/churro.jpg"), username: "popyummy_mag", header: false },
+          { name: "#BubbleTea", image: require("../images/item/bubbletea.jpg"), username: "popyummy_mag", header: false },
+          { name: "#Frui #Shake", image: require("../images/item/fruitshake.jpg"), username: "popyummy_mag", header: false },
+          { name: "#Colorful #Shake", image: require("../images/item/shake.jpg"), username: "popyummy_mag", header: false },
+          { name: "#Taiwanese #Pastry", image: require("../images/item/pastry.jpg"), username: "popyummy_mag", header: false },
 
           { name: "Looking for Sweets?", header: true },
-          { id: "22", name: "Matcha Sweets", image: require("../images/item/matcha.jpg"), username: "finalefinale", header: false },
-          { id: "23", name: "Pancakes", image: require("../images/item/pancakes.jpg"), username: "4foodie", header: false },
-          { id: "24", name: "Balck Ice Cream", image: require("../images/item/blackice.jpg"), username: "finalefinale", header: false },
-          { id: "25", name: "Matcha Cake", image: require("../images/item/matchacake.jpg"), username: "popyummy_mag", header: false },
-          { id: "26", name: "Patisserie", image: require("../images/item/patisserie.jpg"), username: "popyummy_mag", header: false },
-          { id: "27", name: "Tiramisu", image: require("../images/item/tiramisu.jpg"), username: "popyummy_mag", header: false },
+          { name: "#Matcha #Sweets", image: require("../images/item/matcha.jpg"), username: "finalefinale", header: false },
+          { name: "#Pancakes", image: require("../images/item/pancakes.jpg"), username: "4foodie", header: false },
+          { name: "#Balck #IceCream", image: require("../images/item/blackice.jpg"), username: "finalefinale", header: false },
+          { name: "#Matcha #Cake", image: require("../images/item/matchacake.jpg"), username: "popyummy_mag", header: false },
+          { name: "#Patisserie", image: require("../images/item/patisserie.jpg"), username: "popyummy_mag", header: false },
+          { name: "#Tiramisu", image: require("../images/item/tiramisu.jpg"), username: "popyummy_mag", header: false },
         ],
         stickyHeaderIndices: [],
       };
@@ -71,10 +73,10 @@ class Discover extends Component {
     renderItem = ({ item }) => {
       if (item.header) {
         return (
-          <ListItem itemDivider>
+          <ListItem itemDivider key={item.name}>
             <Left />
             <Body style={{  marginRight: 300, paddingTop: 20 }}>
-              <Text style={{ fontWeight: "bold", alignSelf: 'center', marginLeft: 300  }}>
+              <Text style={{ fontWeight: "bold", alignSelf: 'center', marginLeft: 300, color:'slategray'  }}>
                 {item.name}
               </Text>
             </Body>
@@ -83,27 +85,29 @@ class Discover extends Component {
         );
       } else if (!item.header) {
         return (
-          <ListItem style={{ marginLeft: 0 }}>
+          <ListItem style={{ marginLeft: 0 }} key={item.name}>
             <Body >
-              <Text style={{ alignSelf: 'center'}}>{item.name} </Text>
+              <Text style={{ alignSelf: 'center', marginBottom: 10, fontWeight: 'bold', fontFamily: 'AvenirNext-Bold'}}>{item.name} </Text>
               <Image style={ styles.img } source={item.image}/>
-              <Text style={{ alignSelf: 'center'}}>credit: {item.username}</Text>
+              <Text style={{ alignSelf: 'center', marginTop: 10, fontFamily: 'AvenirNext-Regular'}}>Credit: {item.username}</Text>
             </Body>
           </ListItem>
         );
       }
     };
     render() {
-  return (
-    <View>
-    <FlatList
-      data={this.state.data}
-      renderItem={this.renderItem}
-      keyExtractor={item => item.id}
-      stickyHeaderIndices={this.state.stickyHeaderIndices}
-    />
-    </View>
-  );
+    return (
+
+      <View>
+        <FlatList
+          data={this.state.data}
+          renderItem={this.renderItem}
+          keyExtractor={item => item.name}
+          stickyHeaderIndices={this.state.stickyHeaderIndices}
+        />
+
+      </View>
+    );
 }
 }
 
